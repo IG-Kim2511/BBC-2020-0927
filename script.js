@@ -11,9 +11,6 @@
 
   // ●js 02-08 changing images by height of text bubble
 
-
-let currentItem;
-
   window.addEventListener("scroll", () => {
     let step;
     let boundingRect;
@@ -25,19 +22,22 @@ let currentItem;
       // console.log(boundingRect);
       // console.log(boundingRect.top);
 
-   
       if (
         boundingRect.top > window.innerHeight * 0.1 &&
         boundingRect.top < window.innerHeight * 0.8
       ) {
-        graphicElems[step.dataset.index].classList.add('visible');
-      }else{
-        graphicElems[step.dataset.index].classList.remove('visible');
-
+        graphicElems[step.dataset.index].classList.add("visible");
+      } else {
+        graphicElems[step.dataset.index].classList.remove("visible");
       }
-
-
-
     }
+  });
+
+  // js 03-21 refresh and top screen
+
+  window.addEventListener('load',()=>{
+    setTimeout(() => {
+      scrollTo(0,0)
+    }, 100);
   });
 })();

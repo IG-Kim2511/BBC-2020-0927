@@ -33,11 +33,13 @@
     }
   });
 
+  graphicElems[0].classList.add("visible");
+
   // js 03-21 refresh and top screen
 
-  window.addEventListener('load',()=>{
+  window.addEventListener("load", () => {
     setTimeout(() => {
-      scrollTo(0,0)
+      scrollTo(0, 0);
     }, 100);
   });
 })();

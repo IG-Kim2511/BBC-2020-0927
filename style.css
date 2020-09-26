@@ -1,3 +1,96 @@
+/* ● */
+
 html {
   font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: royalblue;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*  */
+
+.global-width {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.graphic-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  /* css 01 . js 02-03 */
+  /* opacity: 0; */
+  transition: 0.5s;
+
+  will-change: opacity;
+}
+/* css 01 */
+
+.visible {
+  opacity: 1;
+}
+
+/*  */
+.scroll-graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.scroll-text {
+  position: relative;
+}
+
+.step {
+  border-radius: 0.5rem;
+  margin-bottom: 60vh;
+  padding: 0.5rem 1rem;
+
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 3) 0 0 3px;
+}
+
+.scene-img {
+  max-height: 100vh;
+}
+
+.bird {
+  position: absolute;
+  left: 0;
+  bottom: 70%;
+  width: 100px;
+
+  transform: translateX(-100%);
+  transition: 1.5s 0.5s linear;
+}
+
+.global-footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .step {
+    margin-bottom: 40vh;
+  }
 }

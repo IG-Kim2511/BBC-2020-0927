@@ -12,6 +12,7 @@
   // ●js 02-08 changing images by height of text bubble
 
 
+let currentItem;
 
   window.addEventListener("scroll", () => {
     let step;
@@ -24,12 +25,19 @@
       // console.log(boundingRect);
       // console.log(boundingRect.top);
 
+   
       if (
         boundingRect.top > window.innerHeight * 0.1 &&
         boundingRect.top < window.innerHeight * 0.8
       ) {
-        currentItem.classlist.add("visible");
+        graphicElems[step.dataset.index].classList.add('visible');
+      }else{
+        graphicElems[step.dataset.index].classList.remove('visible');
+
       }
+
+
+
     }
   });
 })();

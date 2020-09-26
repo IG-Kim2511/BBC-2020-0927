@@ -37,7 +37,7 @@ img {
   height: 100vh;
 
   /* css 01 . js 02-03 */
-  /* opacity: 0; */
+  opacity: 0;
   transition: 0.5s;
 
   will-change: opacity;
